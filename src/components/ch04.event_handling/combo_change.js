@@ -4,7 +4,7 @@ function App(){
     const [selected, setSelected] = useState("");
     const data = {
         bread: ["식빵", "크루아상", "바게트", "치아바타", "크로아상", "브리오슈"],
-        drink: ["콜라", "사이다", "주스"]
+        drink: ["콜라", "사이다", "주스", "아메리카노", "라떼", "와인"]
     };
 
     const ChangeEvent = (e) => {
