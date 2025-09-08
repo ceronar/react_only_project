@@ -3,9 +3,17 @@
 // npm install react-router-dom 엔터
 import { Routes, Route } from 'react-router-dom';
 
-// ch02 장
+
 // 기호 .는 현재 폴더, .. 는 상위 폴더, /는 폴더 구분자
 // import 앱이름 from '전체경로/파일명'
+// ch01 장
+import AppMakeArray01 from './../components/ch01.react_basic/make_array_01';
+import AppMathObject01 from './../components/ch01.react_basic/math_object_01';
+import AppIfExercise from './../components/ch01.react_basic/if_exercise';
+import AppSwitchExercise from './../components/ch01.react_basic/switch_exercise';
+import AppTypeOfNumber from './../components/ch01.react_basic/typeof_number';
+
+// ch02
 import AppLetConst from './../components/ch02.es6_syntax/let_const';
 import AppTemplateString from './../components/ch02.es6_syntax/template_string';
 import AppSubjectList from './../components/ch02.es6_syntax/make_subject_list';
@@ -14,7 +22,7 @@ import AppArrowFunction from './../components/ch02.es6_syntax/arrow_function';
 import AppArrayMap from './../components/ch02.es6_syntax/array_map';
 import AppSpreadOperator from './../components/ch02.es6_syntax/spread_operator';
 
-// ch03장
+// ch03
 import AppClassComponent from './../components/ch03.component/components01';
 import AppFunctionComponent from './../components/ch03.component/components02';
 import AppComponentSeparate from './../components/ch03.component/component_separate';
@@ -23,23 +31,44 @@ import AppUseProps from './../components/ch03.component/use_props';
 import AppMakeTable01 from './../components/ch03.component/array_and_table_01';
 import AppMakeTable02 from './../components/ch03.component/array_and_table_02';
 
-// ch04장
+// ch04
 import AppClickEvent from './../components/ch04.event_handling/click_event';
 import AppChangeEvent from './../components/ch04.event_handling/change_event';
 import AppMouseEvent from './../components/ch04.event_handling/mouse_event';
 import AppKeyEvent from './../components/ch04.event_handling/key_event';
 import AppComboChange from './../components/ch04.event_handling/combo_change';
+import AppSubmitEvent from './../components/ch04.event_handling/submit_event';
+
+// ch05
+import AppUseState01 from './../components/ch05.hooks/use_state_01';
+import AppUseState02 from './../components/ch05.hooks/use_state_02';
+import AppUseState03 from './../components/ch05.hooks/use_state_03';
 
 function AppRoutes() {
     return (
         <Routes>
+            {/* 제5장 */}
+            <Route path='/use_state_01' element={<AppUseState01 />} />
+            <Route path='/use_state_02' element={<AppUseState02 />} />
+            <Route path='/use_state_03' element={<AppUseState03 />} />
+
+            {/* 제4장 */}
             <Route path='/click_event' element={<AppClickEvent />} />
             <Route path='/change_event' element={<AppChangeEvent />} />
             <Route path='/mouse_event' element={<AppMouseEvent />} />
             <Route path='/key_event' element={<AppKeyEvent />} />
             <Route path='/combo_change' element={<AppComboChange />} />
+            <Route path='/submit_event' element={<AppSubmitEvent />} />
+
+            {/* 제01장 */}
+            <Route path='/make_array_01' element={<AppMakeArray01 />} />
+            <Route path='/math_object_01' element={<AppMathObject01 />} />
+            <Route path='/if_exercise' element={<AppIfExercise />} />
+            <Route path='/switch_exercise' element={<AppSwitchExercise />} />
+            <Route path='/typeof_number' element={<AppTypeOfNumber />} /> 
 
             {/* element 속성에는 컴포넌트 자체가 아니라 JSX 요소를 넣어야 합니다. */}
+            {/* 제2장 */}
             <Route path='/' element={<AppLetConst />} />
             <Route path='/let_const' element={<AppLetConst />} />
             <Route path='/template_string' element={<AppTemplateString />} />
@@ -49,6 +78,7 @@ function AppRoutes() {
             <Route path='/array_map' element={<AppArrayMap />} />
             <Route path='/spread_operator' element={<AppSpreadOperator />} />
 
+            {/* 제3장 */}
             <Route path='/components01' element={<AppClassComponent />} />
             <Route path='/components02' element={<AppFunctionComponent />} />
             <Route path='/component_separate' element={<AppComponentSeparate />} />

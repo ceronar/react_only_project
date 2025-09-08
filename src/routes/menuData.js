@@ -2,6 +2,16 @@
 // export 키워드는 외부에서 참조 가능하도록 길을 틔워줌
 export const menuData = [
     {
+        chapter: "ch01. Basic",
+        items: [
+            { path: '/make_array_01', label: '배열 실습 01' },
+            { path: '/math_object_01', label: 'Math 객체 실습 01' },
+            { path: '/if_exercise', label: 'If 구문 실습' },
+            { path: '/switch_exercise', label: 'Switch 구문 실습' },
+            { path: '/typeof_number', label: 'Typeof와 Number 실습' },
+        ]
+    },
+    {
         chapter: "ch02. ECMAScript",
         items: [
             { path: '/let_const', label: 'let & const 실습' },
@@ -33,6 +43,15 @@ export const menuData = [
             { path: '/mouse_event', label: '마우스 이벤트' },
             { path: '/key_event', label: '키 이벤트' },
             { path: '/combo_change', label: '콤보 체인지' },
+            { path: '/submit_event', label: '전송 이벤트' },
+        ]
+    },
+    {
+        chapter: "ch05. Hooks",
+        items: [
+            { path: '/use_state_01', label: '스테이트 실습 01' },
+            { path: '/use_state_02', label: '스테이트 실습 02' },
+            { path: '/use_state_03', label: '스테이트 실습 03' },
         ]
     },
     // 여기에 4장, 5장... 내용을 계속 추가하면 됩니다. 
