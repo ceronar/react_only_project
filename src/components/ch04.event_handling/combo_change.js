@@ -32,15 +32,15 @@ function App(){
             <table>
                 <tbody>
                     <tr>
-                        <td>
+                        <td height={50}>
                             <b>콤보 체인지</b>
                         </td>
-                        <td rowSpan={4} width={300} height={300}>
+                        <td rowSpan={4} width={310} height={310}>
                             <img id="large_image" src={"/images/"+selectedImage || ""} alt="noimage" width={300} height={300} />
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td height={50}>
                             <select onChange={ChangeEvent}>
                                 <option value="">-- 선택하세요 --</option>
                                 <option value="bread">빵</option>
@@ -49,7 +49,7 @@ function App(){
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td height={50}>
                             <b>클릭 이벤트 테스트</b>
                         </td>
                     </tr>
