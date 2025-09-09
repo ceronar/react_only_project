@@ -67,7 +67,9 @@ function App(){
     const MyTimer = () => {
         // setTimeout(동작, 인터벌) : 일정 시간 후에 동작 실행
         // setInterval(동작, 인터벌) : 일정 시간마다 동작 반복 실행
-        setTimeout(SomeAction, interval);
+        const timerId = setTimeout(SomeAction, interval);
+
+        setTimeout(() => { clearTimeout(timerId)}, 5000); // 5초 후에 타이머 해제
     }
 
     useEffect(MyTimer, [count]);
@@ -78,12 +80,15 @@ function App(){
     }, [count]);
     */
 
+    // 위의 코드를 더 간단히 작성
     useEffect(() => {
-        setTimeout(() => {
+        if (count >= 10) return; // 10 이상이면 타이머 등록하지 않음
+        const timerId = setTimeout(() => {
             setCount(count + 1);
             const index = Math.floor(Math.random() * imageList.length);
             setImage(`${imagePath}/${imageList[index]}`);
         }, interval);
+        return () => clearTimeout(timerId);
     }, [count]);
 
     return(
