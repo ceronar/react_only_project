@@ -48,9 +48,17 @@ import AppUseEffect01 from './../components/ch05.hooks/use_effect_01';
 import AppUseEffect02 from './../components/ch05.hooks/use_effect_02';
 import AppUseEffect03 from './../components/ch05.hooks/use_effect_03';
 
+// ch06
+import AppCafe01 from '../components/ch06.bootstrap/coffee_bread_01/main';
+import AppCafe02 from '../components/ch06.bootstrap/coffee_bread_02/main';
+
 function AppRoutes() {
     return (
         <Routes>
+            {/* 제6장 */}
+            <Route path='/coffee_bread_01' element={<AppCafe01 />} />
+            <Route path='/coffee_bread_02' element={<AppCafe02 />} />
+
             {/* 제5장 */}
             <Route path='/use_state_01' element={<AppUseState01 />} />
             <Route path='/use_state_02' element={<AppUseState02 />} />
