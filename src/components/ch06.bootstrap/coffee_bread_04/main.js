@@ -81,15 +81,20 @@ function App(){
 
     // 사용자가 상품 수정 화면에서 내용을 수정하고, [수정] 버튼을 누름
     const UpdateData = (formData) => {
+        console.log(formData);
         const updateData = [{
-            id: formData.id.value,
-            name: formData.name.value,
-            price: Number(formData.price.value),
-            category: formData.category.value,
-            stock: Number(formData.stock.value),
-            image: formData.image.value,
-            description: formData.description.value
+            id: formData.id,
+            name: formData.name,
+            price: Number(formData.price),
+            category: formData.category,
+            stock: Number(formData.stock),
+            image: formData.image,
+            description: formData.description
         }];
+        console.log(updateData);
+        const updateProducts = products.filter(n=>n.id!==Number(formData.id)).push(updateData);
+        setProducts(updateProducts);
+        setMode('read');
     }
     
     return(
