@@ -83,7 +83,7 @@ function App(){
     const UpdateData = (formData) => {
         console.log(formData);
         const updateData = [{
-            id: formData.id,
+            id: Number(formData.id),
             name: formData.name,
             price: Number(formData.price),
             category: formData.category,
@@ -92,7 +92,7 @@ function App(){
             description: formData.description
         }];
         console.log(updateData);
-        const updateProducts = products.filter(n=>n.id!==Number(formData.id)).push(updateData);
+        const updateProducts = products.filter(n=>n.id!==Number(formData.id)).concat(updateData);
         setProducts(updateProducts);
         setMode('read');
     }
