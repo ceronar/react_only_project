@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 // 리액트 라우터를 사용하기 위해서 BrowserRouter를 App 외부에 감싸 주는 역할
 // App.js 파일을 index.js 파일이 포함하고 있으므로, BrowserRouter는 index.js 파일에 한번만 명시해주면 됩니다.
