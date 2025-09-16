@@ -3,7 +3,7 @@ function App(){
 
     console.log('함수 선언문');
     function jegob01(a, b){
-        if(b == undefined){
+        if(b === undefined){
             console.log('매개 변수에 값 할당이 안 되면 undefined입니다.');
             console.log('b : ' + b);
         }

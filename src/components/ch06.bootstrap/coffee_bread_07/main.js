@@ -216,16 +216,32 @@ function App(){
     }
 
     /* 필드 검색 기능 추가 */
-    const [filterCategory, setFilterCategory] = useState(null);
+    // const [filterCategory, setFilterCategory] = useState(products);
+    const [filterCategory, setFilterCategory] = useState('all');
 
     // 사용자가 카테고리 콤보 박스에서 다른 카테고리를 선택함.
     const CategoryChanged = (changedCategory) => {
         setFilterCategory(changedCategory); // 선택된 카테고리의 이름이 변경됨
         
+        // // 필드 검색을 사용하여 필터링을 수행할지 결정
+        // if(changedCategory !== 'all' && changedCategory) {
+        //     setFilterCategory(products.filter(n=>n.category === changedCategory));
+        // } else {
+        //     setFilterCategory(products);
+        // }
+
         // 필터링이 이루어지면 정렬 함수를 다시 실행시켜 화면을 갱신
         Ordering(orderInfo);
     };
-    
+
+    // 필드 검색을 사용하여 필터링을 수행할지 결정
+    const isFilteringNeeded = filterCategory !== 'all' && filterCategory;
+
+    // 삼항연산자를 사용하여 선택된 카테고리와 동일한 품목들만 필터링 동작을 수행
+    const filteredProducts = isFilteringNeeded 
+    ? products.filter(n=>n.category === filterCategory) 
+    : products;
+
     return(
         <Card className="m-3 shadow drag-prevent">
             <Card.Header>
@@ -233,7 +249,8 @@ function App(){
             </Card.Header>
             <Card.Body>
                 {/* onClickToContent 프롭스가 리턴되고 난 후 ClickArrived 함수가 동작 */}
-                <Content contents={products} 
+                <Content // contents={filterCategory} 
+                    contents={filteredProducts}
                     onClickToContent={ClickArrived} 
                     categories={categories} 
                     onOrderByClick={ClickOrderBy}

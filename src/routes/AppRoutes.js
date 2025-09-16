@@ -13,6 +13,10 @@ import AppIfExercise from './../components/ch01.react_basic/if_exercise';
 import AppSwitchExercise from './../components/ch01.react_basic/switch_exercise';
 import AppTypeOfNumber from './../components/ch01.react_basic/typeof_number';
 
+import AppFormExam from './../components/ch01.react_basic/form_exam';
+import AppListExam from './../components/ch01.react_basic/list_exam';
+import AppTableExam from './../components/ch01.react_basic/table_exam';
+
 // ch02
 import AppLetConst from './../components/ch02.es6_syntax/let_const';
 import AppTemplateString from './../components/ch02.es6_syntax/template_string';
@@ -91,7 +95,11 @@ function AppRoutes() {
             <Route path='/math_object_01' element={<AppMathObject01 />} />
             <Route path='/if_exercise' element={<AppIfExercise />} />
             <Route path='/switch_exercise' element={<AppSwitchExercise />} />
-            <Route path='/typeof_number' element={<AppTypeOfNumber />} /> 
+            <Route path='/typeof_number' element={<AppTypeOfNumber />} />
+
+            <Route path='/form_exam' element={<AppFormExam />} />
+            <Route path='/list_exam' element={<AppListExam />} />
+            <Route path='/table_exam' element={<AppTableExam />} />
 
             {/* element 속성에는 컴포넌트 자체가 아니라 JSX 요소를 넣어야 합니다. */}
             {/* 제2장 */}

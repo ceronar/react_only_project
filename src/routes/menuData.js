@@ -9,6 +9,10 @@ export const menuData = [
             { path: '/if_exercise', label: 'If 구문 실습' },
             { path: '/switch_exercise', label: 'Switch 구문 실습' },
             { path: '/typeof_number', label: 'Typeof와 Number 실습' },
+            
+            { path: '/form_exam', label: 'From 양식 실습' },
+            { path: '/list_exam', label: '목록(ol, ul) 실습' },
+            { path: '/table_exam', label: '테이블 실습' },
         ]
     },
     {
@@ -55,7 +59,7 @@ export const menuData = [
             { path: '/use_state_04', label: '스테이트 실습 04' },
             { path: '/use_effect_01', label: '이펙트 사용 01' },
             { path: '/use_effect_02', label: '이펙트 사용 02' },
-            { path: '/use_effect_02', label: '이펙트 사용 03' },
+            { path: '/use_effect_03', label: '이펙트 사용 03' },
         ]
     },
     {
